@@ -8,10 +8,16 @@ $(document).ready(function(){
     qrObject = JSON.parse(qrObject);
     qrLot = qrObject.lot
 
-    image = JsBarcode("#barcode", qrLot);
-    console.log(image);
-    image;
-    image = '<body><div id="barcode">' + image + '</div></body>';
+  //   image = JsBarcode("#barcode", qrLot);
+  //   console.log(image);
+  //   image;
+  //   image = '<body><div id="barcode">' + image + '</div></body>';
+  // })
+
+  '<body><div id="barcode">' + JsBarcode("#barcode", qrLot, {
+      width:1,
+      height:40
+    }) + '</div></body>';
   })
 
   $('.qrPrint').click(function () {
